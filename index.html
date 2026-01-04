@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Holiday Image Prompt Builder</title>
+
+<!-- CONNECT CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="sheet.html">Sheet Data</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section id="home">
+  <h1>✨ Holiday Image Prompt Builder</h1>
+  <p class="note">Elegant prompt generation using only HTML, CSS & JavaScript</p>
+</section>
+
+<section id="builder">
+  <h2>🎨 Prompt Builder</h2>
+
+<label title="Enter the holiday name like Eid or Christmas">Holiday</label>
+<input id="holiday" placeholder="Eid, Christmas" oninput="updatePrompt()">
+
+<label title="Enter the location of the holiday, e.g., Mosque, snowy village">Location</label>
+<input id="location" placeholder="Mosque, snowy village" oninput="updatePrompt()">
+
+<label title="Enter the art style you want, e.g., Realistic, Watercolor">Art Style</label>
+<input id="style" placeholder="Realistic, watercolor" oninput="updatePrompt()">
+
+<label title="Enter the mood or lighting of the image, e.g., Warm, Festive">Mood / Lighting</label>
+<input id="mood" placeholder="Warm, festive lighting" oninput="updatePrompt()">
+
+<label title="Enter aspect ratio of the image, e.g., 1:1, 16:9">Aspect Ratio</label>
+<input id="aspect" placeholder="1:1, 16:9" oninput="updatePrompt()">
+
+<label title="Enter any elements to exclude, e.g., No text, No people">Exclude Parameters</label>
+<input id="exclude" placeholder="No text, no people" oninput="updatePrompt()">
+
+<label title="This box shows the final generated prompt">Final Generated Prompt</label>
+<textarea id="output" readonly></textarea>
+
+
+  <div class="buttons">
+    <button onclick="sendToChatGPT()">Send to ChatGPT</button>
+    <button onclick="copyForMidjourney()">Copy for Midjourney</button>
+    <button onclick="resetForm()">Reset</button>
+  </div>
+</section>
+
+
+<footer>© 2025 Holiday Prompt Builder</footer>
+
+<!-- CONNECT JS -->
+<script src="js/script.js"></script>
+</body>
+</html>
